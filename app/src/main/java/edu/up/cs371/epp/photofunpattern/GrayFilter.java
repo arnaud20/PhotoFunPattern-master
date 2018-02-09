@@ -22,25 +22,27 @@ public class GrayFilter extends PhotoFilter {
     * @return a new Pixel in which each of the RGB components is their averaged
     * value
     */
-    public int transformPixel(int inPixel) {
+    public int transformPixel(int[] pixelArray) {
 
 
 
-        /*pixelArray[0] = (int)((float)pixelArray[0]*0.1);
-        pixelArray[1] = (int)((float)pixelArray[1]*0.1);
-        pixelArray[2] = (int)((float)pixelArray[2]*0.1);
-        pixelArray[3] = (int)((float)pixelArray[3]*0.1);
-        pixelArray[4] = (int)((float)pixelArray[4]*0.2);
-        pixelArray[5] = (int)((float)pixelArray[5]*0.1);
-        pixelArray[6] = (int)((float)pixelArray[6]*0.1);
-        pixelArray[7] = (int)((float)pixelArray[7]*0.1);
-        pixelArray[8] = (int)((float)pixelArray[8]*0.1);*/
+        int p1 = (int)((float)pixelArray[0]*0.1);
+        int p2 = (int)((float)pixelArray[1]*0.1);
+        int p3 = (int)((float)pixelArray[2]*0.1);
+        int p4 = (int)((float)pixelArray[3]*0.1);
+        int p5 = (int)((float)pixelArray[4]*0.2);
+        int p6 = (int)((float)pixelArray[5]*0.1);
+        int p7 = (int)((float)pixelArray[6]*0.1);
+        int p8 = (int)((float)pixelArray[7]*0.1);
+        int p9 = (int)((float)pixelArray[8]*0.1);
 
-        //return pixelArray;
+        pixelArray[4] = p1+p2+p3+p4+p5+p6+p7+p8+p9;
 
-        int intensity = (Color.red(inPixel) + Color.green(inPixel) +
+        return pixelArray[4];
+
+        /*int intensity = (Color.red(inPixel) + Color.green(inPixel) +
                 Color.blue(inPixel)) / 3;
-        return Color.argb(Color.alpha(inPixel), intensity,intensity,intensity);
+        return Color.argb(Color.alpha(inPixel), intensity,intensity,intensity);*/
 
     }
 

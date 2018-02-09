@@ -23,22 +23,22 @@ public class BrightnessFilter extends PhotoFilter {
     * @param inPixel is a 32 bit pixel that contains RGB color values
     * @return a new Pixel in which each of the RGB components has been increased
     */
-    public int transformPixel(int inPixel) {
+    public int transformPixel(int[] pixelArray) {
 
         //2,4,5,8
 
-        /*pixelArray[2] = (-1)*pixelArray[2];
+        pixelArray[2] = (-1)*pixelArray[2];
         pixelArray[4] = (-2)*pixelArray[4];
         pixelArray[5] = (-1)*pixelArray[5];
-        pixelArray[8] = (-1)*pixelArray[8];*/
+        pixelArray[8] = (-1)*pixelArray[8];
 
-        //return pixelArray[];
+        return pixelArray[4];
 
-        int red = constrain(Color.red(inPixel) + ADJUSTMENT);
+        /*int red = constrain(Color.red(inPixel) + ADJUSTMENT);
         int green = constrain(Color.green(inPixel) + ADJUSTMENT);
         int blue = constrain(Color.blue(inPixel) + ADJUSTMENT);
         int outPixel = Color.argb(Color.alpha(inPixel), red, green, blue);
-        return outPixel;
+        return outPixel;*/
 
 
     }
