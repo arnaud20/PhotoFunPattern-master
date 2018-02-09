@@ -23,9 +23,25 @@ public class GrayFilter extends PhotoFilter {
     * value
     */
     public int transformPixel(int inPixel) {
+
+
+
+        /*pixelArray[0] = (int)((float)pixelArray[0]*0.1);
+        pixelArray[1] = (int)((float)pixelArray[1]*0.1);
+        pixelArray[2] = (int)((float)pixelArray[2]*0.1);
+        pixelArray[3] = (int)((float)pixelArray[3]*0.1);
+        pixelArray[4] = (int)((float)pixelArray[4]*0.2);
+        pixelArray[5] = (int)((float)pixelArray[5]*0.1);
+        pixelArray[6] = (int)((float)pixelArray[6]*0.1);
+        pixelArray[7] = (int)((float)pixelArray[7]*0.1);
+        pixelArray[8] = (int)((float)pixelArray[8]*0.1);*/
+
+        //return pixelArray;
+
         int intensity = (Color.red(inPixel) + Color.green(inPixel) +
                 Color.blue(inPixel)) / 3;
         return Color.argb(Color.alpha(inPixel), intensity,intensity,intensity);
+
     }
 
 }
