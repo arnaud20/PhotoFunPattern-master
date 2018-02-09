@@ -57,10 +57,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10">
+        android:layout_weight="10"
+        android:orientation="horizontal">
 
         <Space
             android:layout_width="0dp"
@@ -68,11 +68,11 @@
             android:layout_weight="2" />
 
         <Button
-            android:text="Gray Filter"
+            android:id="@+id/grayFilterButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/grayFilterButton"
             android:layout_weight="3"
+            android:text="Smooth Filter"
             android:textSize="18sp" />
 
         <Space
@@ -81,12 +81,24 @@
             android:layout_weight="0.2" />
 
         <Button
-            android:text="Brightness Filter"
+            android:id="@+id/brightnessFilterButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/brightnessFilterButton"
             android:layout_weight="3"
+            android:text="Brightness Filter"
             android:textSize="18sp" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2" />
+
+        <Spinner
+            android:id="@+id/imageNames"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#00ffff"
+            android:layout_weight="6.2" />
 
         <Space
             android:layout_width="0dp"
