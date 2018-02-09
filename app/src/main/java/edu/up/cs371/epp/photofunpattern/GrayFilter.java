@@ -24,19 +24,41 @@ public class GrayFilter extends PhotoFilter {
     */
     public int transformPixel(int[] pixelArray) {
 
+        int redP1 = constrain(Color.red(pixelArray[0]))/10;
+        int redP2 = constrain(Color.red(pixelArray[1]))/10;
+        int redP3 = constrain(Color.red(pixelArray[2]))/10;
+        int redP4 = constrain(Color.red(pixelArray[3]))/10;
+        int redP5 = constrain(Color.red(pixelArray[4]))/5;
+        int redP6 = constrain(Color.red(pixelArray[5]))/10;
+        int redP7 = constrain(Color.red(pixelArray[6]))/10;
+        int redP8 = constrain(Color.red(pixelArray[7]))/10;
+        int redP9 = constrain(Color.red(pixelArray[8]))/10;
 
+        int greenP1 = constrain(Color.green(pixelArray[0]))/10;
+        int greenP2 = constrain(Color.green(pixelArray[1]))/10;
+        int greenP3 = constrain(Color.green(pixelArray[2]))/10;
+        int greenP4 = constrain(Color.green(pixelArray[3]))/10;
+        int greenP5 = constrain(Color.green(pixelArray[4]))/5;
+        int greenP6 = constrain(Color.green(pixelArray[5]))/10;
+        int greenP7 = constrain(Color.green(pixelArray[6]))/10;
+        int greenP8 = constrain(Color.green(pixelArray[7]))/10;
+        int greenP9 = constrain(Color.green(pixelArray[8]))/10;
 
-        int p1 = (int)((float)pixelArray[0]*0.1);
-        int p2 = (int)((float)pixelArray[1]*0.1);
-        int p3 = (int)((float)pixelArray[2]*0.1);
-        int p4 = (int)((float)pixelArray[3]*0.1);
-        int p5 = (int)((float)pixelArray[4]*0.2);
-        int p6 = (int)((float)pixelArray[5]*0.1);
-        int p7 = (int)((float)pixelArray[6]*0.1);
-        int p8 = (int)((float)pixelArray[7]*0.1);
-        int p9 = (int)((float)pixelArray[8]*0.1);
+        int blueP1 = constrain(Color.blue(pixelArray[0]))/10;
+        int blueP2 = constrain(Color.blue(pixelArray[1]))/10;
+        int blueP3 = constrain(Color.blue(pixelArray[2]))/10;
+        int blueP4 = constrain(Color.blue(pixelArray[3]))/10;
+        int blueP5 = constrain(Color.blue(pixelArray[4]))/5;
+        int blueP6 = constrain(Color.blue(pixelArray[5]))/10;
+        int blueP7 = constrain(Color.blue(pixelArray[6]))/10;
+        int blueP8 = constrain(Color.blue(pixelArray[7]))/10;
+        int blueP9 = constrain(Color.blue(pixelArray[8]))/10;
 
-        pixelArray[4] = p1+p2+p3+p4+p5+p6+p7+p8+p9;
+        int red = redP1+redP2+redP3+redP4+redP5+redP6+redP7+redP8+redP9;
+        int green = greenP1+greenP2+greenP3+greenP4+greenP5+greenP6+greenP7+greenP8+greenP9;
+        int blue = blueP1+blueP2+blueP3+blueP4+blueP5+blueP6+blueP7+blueP8+blueP9;
+
+        pixelArray[4] = Color.argb(Color.alpha(pixelArray[4]), red, green, blue);
 
         return pixelArray[4];
 
