@@ -27,10 +27,10 @@ public class BrightnessFilter extends PhotoFilter {
 
         //2,4,5,8
 
-        pixelArray[2] = (-1)*pixelArray[2];
-        pixelArray[4] = (-2)*pixelArray[4];
-        pixelArray[5] = (-1)*pixelArray[5];
-        pixelArray[8] = (-1)*pixelArray[8];
+        int p2 = (-1)*pixelArray[2];
+        int p4 = (-2)*pixelArray[4];
+        int p5 = (-1)*pixelArray[5];
+        int p8 = (-1)*pixelArray[8];
 
         return pixelArray[4];
 
